@@ -1,3 +1,4 @@
+package Inicio;
 public class bilder2 {
     
     public static void main(String[] args) {

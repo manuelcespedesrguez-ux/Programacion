@@ -1,3 +1,4 @@
+package Inicio;
 public class Cadenas7 {
 
     public static void main(String[] args) {

@@ -1,23 +1,51 @@
+package Ordenamiento;
 import java.util.Arrays;
 import java.util.Random;
+import java.lang.String;
 
-public class InsertionSort2 {
+public class Mergesort2 {
     
-     public static String[] insertionsort(String[] numbers) {
+    public static String[] mergeSort(String array[]) {
 
-    for (int i = 0; i < numbers.length; i++) {
-        String copyNumber = numbers[i];
-        int j = i;
-        while (j > 0 && (copyNumber.compareTo(numbers[j-1])<0)) {
-            numbers[j] = numbers[j-1];
-            j--;
+        if(array.length > 1){
+
+            int element1 = array.length / 2;
+            int element2 = array.length - element1;
+
+            
+            String arr1[] = new String[element1];
+            String arr2[] = new String[element2];
+
+            for(int i = 0; i < element1; i++)
+                arr1[i] = array[i];
+
+            for(int i = element1; i < element1 + element2; i++)
+                arr2[i - element1] = array[i];
+
+            arr1 = mergeSort(arr1);
+            arr2 = mergeSort(arr2);
+
+            int i = 0, j = 0, k = 0;
+
+            while(arr1.length != j && arr2.length != k){
+
+                if (arr1[j].compareTo(arr2[k]) < 0 ){
+                    array[i] = arr1[j];
+                    i++;
+                    j++;
+                }
+
+                else {
+                    array[i] = arr2[k];
+                    i++;
+                    k++;
+                }
+            }
         }
-        numbers[j] = copyNumber;
-    }
-    return numbers;
+        return array;
     }
 
-    public static void main(String[] args) {
+         public static void main(String[] args) {
         
         //1. Lista base de nombres
         String[] hombres = {"Alejandro", "Mateo", "Luca", "Diego", "Hugo", "Leo", "Bruno", "Marcos", "Pablo", "Dante"};
@@ -42,9 +70,10 @@ public class InsertionSort2 {
         System.out.println(Arrays.toString((nombresMezclados)));
 
         // Ordena con insertionSort
-        nombresMezclados = insertionsort(nombresMezclados);
+        nombresMezclados = mergeSort(nombresMezclados);
 
         // Vuelve a mostrar ya ordenado 
         System.out.println(Arrays.toString(nombresMezclados));
+      
     }
 }

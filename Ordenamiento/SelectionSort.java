@@ -1,3 +1,4 @@
+package Ordenamiento;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -28,7 +29,7 @@ public class SelectionSort {
         datos = selectionsort(datos);
         System.out.println(Arrays.toString(datos));   
 
-        int[] numeros = new int[1000000];
+        int[] numeros = new int[10000];
         Random random = new Random();
 
         for (int i = 0; i < numeros.length; i++){

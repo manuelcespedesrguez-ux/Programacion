@@ -1,3 +1,4 @@
+package Ordenamiento;
 import java.util.Arrays;
 
 public class Mergesort {
@@ -60,15 +61,8 @@ public class Mergesort {
 		}
 		
 		return array;
-	}
-    
-	public static void main(String[] args) {
-        int[] datos = {2, 5, 0, 9, 3, 1, 8, 4, 7, 6, 2, 5, 9, 0, 3, 1, 4, 7, 8, 2};
-        System.out.println(Arrays.toString(datos));
-        datos = mergeSort(datos);
-        System.out.println(Arrays.toString(datos));   
     }
-	
-	
 }
+	
+
 

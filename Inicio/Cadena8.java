@@ -1,3 +1,4 @@
+package Inicio;
 import java.util.Arrays;
 
 public class Cadena8 {

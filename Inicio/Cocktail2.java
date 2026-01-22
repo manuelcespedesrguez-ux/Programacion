@@ -1,11 +1,30 @@
+package Inicio;
 import java.util.Arrays;
 import java.util.Random;
 
-public class CocktailSort {
+public class Cocktail2 {
+    
+    public static void main(String[] args) {
+        
+        //1. Declaramos el array de 100 posiciones
+        float[] notas = new float[100];
+        Random random = new Random();
 
-        //a.k.a. bidirectional bubble sort
-        public static int[] cocktailSort(int[] numbers) 
-{
+        //2. Llenamos el array con un bucle for
+        for(int i=0; i<notas.length; i++) {
+             //nextFloat() genera números entre 0.0 y 1.0, por eso multiplicamos por 10
+            notas[i] = random.nextFloat() * 10;
+        }
+
+        System.out.println(Arrays.toString(notas));
+
+        notas = cocktailSort(notas);
+
+        System.out.println(Arrays.toString(notas));
+    }
+
+    public static float[] cocktailSort(float[] numbers){
+
       boolean swapped = true;
       int i = 0;
       int j = numbers.length - 1;
@@ -16,7 +35,7 @@ public class CocktailSort {
          {
             if(numbers[k] > numbers[k + 1]) 
             {
-               int temp = numbers[k];
+               float temp = numbers[k];
                numbers[k] = numbers[k + 1];
                numbers[k + 1] = temp;
                swapped = true;
@@ -30,7 +49,7 @@ public class CocktailSort {
             {
                if(numbers[k] < numbers[k - 1]) 
                {
-                  int temp = numbers[k];
+                  float temp = numbers[k];
                   numbers[k] = numbers[k - 1];
                   numbers[k - 1] = temp;
                   swapped = true;
@@ -41,23 +60,4 @@ public class CocktailSort {
       }
       return numbers;    
     }   
-    public static void main(String[] args) {
-        int[] datos = {2, 5, 0, 9, 3, 1, 8, 4, 7, 6, 2, 5, 9, 0, 3, 1, 4, 7, 8, 2}; 
-        System.out.println(Arrays.toString(datos));
-        
-        datos = cocktailSort(datos);
-        System.out.println(Arrays.toString(datos));
-
-        int[] muchas = new int[1000];
-        Random random = new Random();
-        for(int i=0;i<muchas.length;i++) {
-            muchas[i]=random.nextInt(10);
-        }
-
-        System.out.println();
-        muchas = cocktailSort(muchas);
-        
-        System.out.println(Arrays.toString(muchas));
-
-}
 }
