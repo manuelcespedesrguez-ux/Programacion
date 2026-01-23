@@ -10,9 +10,10 @@ public static boolean esCapicua(int numero){
     String derecho = String.valueOf(numero);
     String reves =  new StringBuilder(derecho).reverse().toString();
     int oremun = Integer.parseInt(reves);
-    if(numero == oremun)
-        cap = true;
-    return cap;    
+    if(derecho.equals(reves))
+        return true;
+    else
+        return false;    
     }
 
     public static void main(String[] args) {
