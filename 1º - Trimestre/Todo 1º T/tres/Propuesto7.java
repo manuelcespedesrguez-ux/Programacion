@@ -1,0 +1,27 @@
+package tres;
+
+import java.util.Random;
+
+public class Propuesto7 {
+
+	public static void main(String[] args) {
+		
+		int pares=0;
+		int impares=0;
+		for(int i = 0; i < 50; i++) {
+		Random rnd = new Random();
+		int valor = rnd.nextInt(100,200);
+		System.out.println("Genera random --> "+valor);
+		if(valor%2==0) {
+			System.out.println("Este número es par");
+			pares++;
+		}else {
+			System.out.println("Este número es impar");
+			impares++;
+		}
+		System.out.println("El número total de pares es: "+pares);
+		System.out.println("El número total de impares es: "+impares);
+		}
+	
+}
+}
