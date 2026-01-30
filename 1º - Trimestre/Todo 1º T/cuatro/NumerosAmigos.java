@@ -1,5 +1,3 @@
-package cuatro;
-
 import java.util.Scanner;
 
 public class NumerosAmigos {

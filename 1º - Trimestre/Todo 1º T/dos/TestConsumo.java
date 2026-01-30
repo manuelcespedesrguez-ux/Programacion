@@ -1,6 +1,6 @@
-package dos;
-
 import java.util.Scanner;
+
+import dos.Consumo;
 
 public class TestConsumo {
 

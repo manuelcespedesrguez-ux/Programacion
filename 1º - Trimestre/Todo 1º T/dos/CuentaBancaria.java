@@ -1,5 +1,3 @@
-package dos;
-
 public class CuentaBancaria {
 
 	float interes;

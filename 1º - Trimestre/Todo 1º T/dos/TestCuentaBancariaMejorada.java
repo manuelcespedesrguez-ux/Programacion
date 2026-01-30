@@ -1,6 +1,4 @@
-package dos;
-
-import dos.CuentaBancariaMejorada.TipoCuenta;
+import dos.CuentaBancariaMejorada;
 
 public class TestCuentaBancariaMejorada {
 
