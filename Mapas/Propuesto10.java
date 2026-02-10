@@ -1,4 +1,4 @@
-package Ejercicios;
+package Mapas;
 
 import java.util.ArrayList;
 import java.util.Arrays;

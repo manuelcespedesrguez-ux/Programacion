@@ -1,4 +1,4 @@
-package Ejercicios;
+package Mapas;
 
 import java.util.Arrays;
 import java.util.Random;

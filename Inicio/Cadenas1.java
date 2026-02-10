@@ -1,5 +1,7 @@
 package Inicio;
+
 import java.util.Arrays;
+
 public class Cadenas1 {
      public static void main(String[] args9) {
 

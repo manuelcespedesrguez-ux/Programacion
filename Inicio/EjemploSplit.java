@@ -1,4 +1,5 @@
 package Inicio;
+
 public class EjemploSplit {
 
     public static void main(String[] args) {

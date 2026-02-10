@@ -1,4 +1,5 @@
 package Inicio;
+
 public class Cadenas6 {
     
     public static void main(String[] args) {
