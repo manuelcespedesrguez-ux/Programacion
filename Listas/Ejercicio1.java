@@ -14,8 +14,14 @@ public class Ejercicio1 {
         compis.add("Sergio E");
         compis.add("Manuel C");
 
+        System.out.println("Con forEnhanced");
         for (String puntero : compis)
             System.out.println(puntero);
+
+        System.out.println("Con un forEach");
+        compis.forEach(jicho -> System.out.println(jicho));
+
+
     }
 
 }
