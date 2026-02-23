@@ -31,7 +31,7 @@ public class Ecologico implements Comparable<Ecologico> {
         contar.put("guisantes", 1.60f);
     }
 
-    static String[] productos = { "avena", "garbanzos", "tomate", "jengibre", "quinoa", "guisantes" };
+    public static String[] productos = { "avena", "garbanzos", "tomate", "jengibre", "quinoa", "guisantes" };
 
     String producto;
     int cantidad;
