@@ -12,8 +12,9 @@ import java.util.Scanner;
 public class GestionDiscos {
 
     public static Scanner s;
+    public static final int PLAZAS = 100;
 
-    public static Disco[] discos = new Disco[100];
+    public static Disco[] discos = new Disco[PLAZAS];
 
     public static void crearColeccion() {
 
@@ -95,10 +96,10 @@ public class GestionDiscos {
         System.out.println("Se añadirá a la colección antes que el primer disco libre");
 
         boolean no_trovato = true;
-        int pos = -1; // Evito problemas
+        int posh = -1; // Evito problemas
         do {
-            pos++;
-            if (discos[pos].getCodigo().equals("LIBRE")) no_trovato = false;
+            posh++;
+            if (discos[posh].getCodigo().equals("LIBRE")) no_trovato = false;
         } while(no_trovato);
 
         System.out.print("Código: ");
@@ -112,8 +113,41 @@ public class GestionDiscos {
         System.out.print("Duración: ");
         Integer duracionIn = Integer.parseInt(s.nextLine());
 
-        discos[pos] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
+        discos[posh] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
+        System.out.println("...añadido disco a la colección...");
     }
+
+    public static int buscarCodigo(){
+
+        int posh = -1;
+        boolean no_encontrado = true;
+        System.out.print("Introduzca codigo existente: ");
+        String code = s.nextLine();
+        for (int i = 0; i < discos.length; i++) {
+            // 1. Comparamos el código
+            if(discos[posh].getCodigo().equals(code))
+                return i;
+        }
+
+        return -1;
+
+    }
+
+    private static void modificarDiscoExistente() {
+       System.out.println("Hay que buscar por codigo el disco a modificar");
+       System.out.println("Una vez encontrado se muestran los datos");
+       System.out.println("Y se piden de nuevo");
+
+       int indice = buscarCodigo();
+       if (indice<discos.length) {
+            System.out.println("Mostrar datos disco");
+            System.out.println(discos[indice].toString());
+            System.out.println("y ahora modificar...");
+       }else {
+            System.out.println("Código no encontrado");
+       }
+    }
+
 
     public static void main(String[] args) {
 
@@ -171,7 +205,7 @@ public class GestionDiscos {
                     System.out.println("\nMODIFICAR");
                     System.out.println("===========");
                     // Método para modificar un disco existente (que tenga código númerico)
-                    
+                    modificarDiscoExistente();
                     break;
 
                 case 4:
