@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 public class Propuesto11 {
 
-    public static void main(String[] args) {
+    @SuppressWarnings("resource")
+    public static void main(String[] args, String string) {
 
-        HashMap<String, String> registro = new HashMap<String, String>();
-        String user = "";
-        String pass = "";
+        HashMap<String, String> registro = new HashMap<>();
+        String user;
+        String pass;
         Scanner sc = new Scanner(System.in);
 
         registro.put("Pepe Vazquez", "abcd");

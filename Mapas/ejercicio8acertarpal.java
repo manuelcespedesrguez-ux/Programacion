@@ -11,6 +11,7 @@ public class ejercicio8acertarpal {
 
     public static HashMap<String, String> crearDiccionario() {
         
+        @SuppressWarnings("Convert2Diamond")
         HashMap<String, String> diccionario = new HashMap<String, String>();
 
         diccionario.put("Hola", "Hello");
@@ -32,6 +33,7 @@ public class ejercicio8acertarpal {
         return diccionario;
     }
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
@@ -43,7 +45,7 @@ public class ejercicio8acertarpal {
         System.out.println(diccionario.keySet());
 
         // Genero un array estático de palabras en castellano con el keyset
-        String[] palabras = diccionario.keySet().toArray(new String[0]);
+        String[] palabras = diccionario.keySet().toArray(String[]::new);
 
         // Contador de aciertos
         int cont = 0;

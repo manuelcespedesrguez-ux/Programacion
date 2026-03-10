@@ -1,6 +1,5 @@
 package Listas;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -13,6 +12,7 @@ public class Ejercicio15 {
         // Creo arrays para almacenar los productos del cliente
         HashMap<String, Integer> totalcesta = new HashMap<>();
 
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
 
         boolean t = true;

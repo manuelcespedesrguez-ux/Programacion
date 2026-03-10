@@ -13,6 +13,7 @@ public class Ejercicio14 {
         ArrayList<String> productosComprados = new ArrayList<>();
         ArrayList<Integer> cantidadesCompradas = new ArrayList<>();
 
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
 
         boolean t = true;

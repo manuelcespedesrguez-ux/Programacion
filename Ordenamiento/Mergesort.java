@@ -1,8 +1,8 @@
 package Ordenamiento;
-import java.util.Arrays;
 
 public class Mergesort {
     
+        @SuppressWarnings("ManualArrayToCollectionCopy")
         public static int[] mergeSort(int array[])	{
 		// if the array has more than 1 element, we need to split it and merge the sorted halves
 		if(array.length > 1){

@@ -1,0 +1,109 @@
+package DVDTeca;
+
+public class mockDisco {
+    
+    public static void mockDiscos() {
+    // Bloque 1: Rock & Metal (1-20)
+    discos.add(new Disco("RK001", "Led Zeppelin", "IV", "Rock", 42));
+    discos.add(new Disco("RK002", "Pink Floyd", "The Dark Side of the Moon", "Rock", 43));
+    discos.add(new Disco("RK003", "Deep Purple", "Machine Head", "Rock", 37));
+    discos.add(new Disco("RK004", "AC/DC", "Back in Black", "Rock", 42));
+    discos.add(new Disco("RK005", "Guns N' Roses", "Appetite for Destruction", "Rock", 53));
+    discos.add(new Disco("MT001", "Iron Maiden", "The Number of the Beast", "Metal", 40));
+    discos.add(new Disco("MT002", "Slayer", "Reign in Blood", "Metal", 29));
+    discos.add(new Disco("MT003", "Megadeth", "Rust in Peace", "Metal", 40));
+    discos.add(new Disco("MT004", "Pantera", "Vulgar Display of Power", "Metal", 52));
+    discos.add(new Disco("MT005", "Black Sabbath", "Paranoid", "Metal", 42));
+    discos.add(new Disco("RK006", "The Rolling Stones", "Sticky Fingers", "Rock", 46));
+    discos.add(new Disco("RK007", "The Who", "Who's Next", "Rock", 43));
+    discos.add(new Disco("RK008", "Queen", "A Night at the Opera", "Rock", 43));
+    discos.add(new Disco("RK009", "The Doors", "L.A. Woman", "Rock", 48));
+    discos.add(new Disco("RK010", "Dire Straits", "Brothers in Arms", "Rock", 55));
+    discos.add(new Disco("RK011", "U2", "The Joshua Tree", "Rock", 50));
+    discos.add(new Disco("RK012", "Bruce Springsteen", "Born to Run", "Rock", 39));
+    discos.add(new Disco("RK013", "David Bowie", "Ziggy Stardust", "Rock", 38));
+    discos.add(new Disco("RK014", "Fleetwood Mac", "Rumours", "Rock", 40));
+    discos.add(new Disco("RK015", "The Police", "Synchronicity", "Rock", 44));
+
+    // Bloque 2: Pop & Indie (21-40)
+    discos.add(new Disco("PP001", "Michael Jackson", "Thriller", "Pop", 42));
+    discos.add(new Disco("PP002", "Madonna", "Like a Prayer", "Pop", 51));
+    discos.add(new Disco("PP003", "Prince", "Purple Rain", "Pop", 43));
+    discos.add(new Disco("PP004", "George Michael", "Faith", "Pop", 58));
+    discos.add(new Disco("PP005", "Depeche Mode", "Violator", "Synth-Pop", 47));
+    discos.add(new Disco("IN001", "The Smiths", "The Queen Is Dead", "Indie", 37));
+    discos.add(new Disco("IN002", "The Cure", "Disintegration", "Indie", 72));
+    discos.add(new Disco("IN003", "Joy Division", "Unknown Pleasures", "Indie", 39));
+    discos.add(new Disco("IN004", "Pixies", "Doolittle", "Indie", 38));
+    discos.add(new Disco("IN005", "R.E.M.", "Automatic for the People", "Indie", 48));
+    discos.add(new Disco("PP006", "Pet Shop Boys", "Actually", "Pop", 48));
+    discos.add(new Disco("PP007", "Cyndi Lauper", "She's So Unusual", "Pop", 35));
+    discos.add(new Disco("PP008", "Wham!", "Make It Big", "Pop", 38));
+    discos.add(new Disco("PP009", "Eurythmics", "Sweet Dreams", "Pop", 42));
+    discos.add(new Disco("PP010", "Duran Duran", "Rio", "Pop", 42));
+    discos.add(new Disco("IN006", "The Strokes", "Is This It", "Indie", 36));
+    discos.add(new Disco("IN007", "Arcade Fire", "Funeral", "Indie", 48));
+    discos.add(new Disco("IN008", "Arctic Monkeys", "AM", "Indie", 41));
+    discos.add(new Disco("IN009", "The Killers", "Hot Fuss", "Indie", 45));
+    discos.add(new Disco("IN010", "Franz Ferdinand", "Franz Ferdinand", "Indie", 38));
+
+    // Bloque 3: Jazz, Blues & Soul (41-60)
+    discos.add(new Disco("JZ001", "Miles Davis", "Kind of Blue", "Jazz", 45));
+    discos.add(new Disco("JZ002", "John Coltrane", "A Love Supreme", "Jazz", 33));
+    discos.add(new Disco("JZ003", "Dave Brubeck", "Time Out", "Jazz", 38));
+    discos.add(new Disco("JZ004", "Charles Mingus", "Ah Um", "Jazz", 45));
+    discos.add(new Disco("JZ005", "Bill Evans", "Sunday at the Village Vanguard", "Jazz", 68));
+    discos.add(new Disco("BL001", "B.B. King", "Live at the Regal", "Blues", 35));
+    discos.add(new Disco("BL002", "Muddy Waters", "Folk Singer", "Blues", 40));
+    discos.add(new Disco("BL003", "Robert Johnson", "King of the Delta Blues Singers", "Blues", 43));
+    discos.add(new Disco("SL001", "Marvin Gaye", "What's Going On", "Soul", 35));
+    discos.add(new Disco("SL002", "Aretha Franklin", "I Never Loved a Man", "Soul", 32));
+    discos.add(new Disco("SL003", "Otis Redding", "Otis Blue", "Soul", 32));
+    discos.add(new Disco("JZ006", "Herbie Hancock", "Head Hunters", "Jazz", 41));
+    discos.add(new Disco("JZ007", "Chet Baker", "Chet Baker Sings", "Jazz", 45));
+    discos.add(new Disco("JZ008", "Nina Simone", "Pastel Blues", "Jazz", 35));
+    discos.add(new Disco("JZ009", "Wes Montgomery", "Incredible Jazz Guitar", "Jazz", 44));
+    discos.add(new Disco("JZ010", "Thelonious Monk", "Brilliant Corners", "Jazz", 42));
+    discos.add(new Disco("SL004", "Stevie Wonder", "Innervisions", "Soul", 44));
+    discos.add(new Disco("SL005", "Sam Cooke", "Night Beat", "Soul", 37));
+    discos.add(new Disco("BL004", "Howlin' Wolf", "The Rockin' Chair Album", "Blues", 32));
+    discos.add(new Disco("BL005", "Stevie Ray Vaughan", "Texas Flood", "Blues", 38));
+
+    // Bloque 4: Música en Español & Flamenco (61-80)
+    discos.add(new Disco("ES001", "Héroes del Silencio", "Senderos de Traición", "Rock", 45));
+    discos.add(new Disco("ES002", "Soda Stereo", "Canción Animal", "Rock", 41));
+    discos.add(new Disco("ES003", "Andrés Calamaro", "Honestidad Brutal", "Rock", 100));
+    discos.add(new Disco("ES004", "Radio Futura", "La canción de Juan Perro", "Pop", 42));
+    discos.add(new Disco("FL001", "Camarón de la Isla", "La Leyenda del Tiempo", "Flamenco", 35));
+    discos.add(new Disco("FL002", "Paco de Lucía", "Fuente y Caudal", "Flamenco", 38));
+    discos.add(new Disco("ES005", "Mecano", "Descanso Dominical", "Pop", 43));
+    discos.add(new Disco("ES006", "Extremoduro", "Agila", "Rock", 41));
+    discos.add(new Disco("ES007", "Los Rodríguez", "Sin Documentos", "Rock", 45));
+    discos.add(new Disco("ES008", "Fito & Fitipaldis", "Lo más lejos a tu lado", "Rock", 44));
+    discos.add(new Disco("ES009", "Vetusta Morla", "Un día en el mundo", "Indie", 51));
+    discos.add(new Disco("ES010", "Joaquín Sabina", "19 días y 500 noches", "Cantautor", 70));
+    discos.add(new Disco("FL003", "Enrique Morente", "Omega", "Flamenco", 52));
+    discos.add(new Disco("ES011", "M-Clan", "Sin enchufe", "Rock", 65));
+    discos.add(new Disco("ES012", "Amaral", "Estrella de mar", "Pop", 48));
+    discos.add(new Disco("ES013", "Leiva", "Diciembre", "Rock", 42));
+    discos.add(new Disco("ES014", "Lori Meyers", "Cronolánea", "Indie", 45));
+    discos.add(new Disco("ES015", "Izal", "Copacabana", "Indie", 46));
+    discos.add(new Disco("ES016", "Bunbury", "Pequeño", "Rock", 55));
+    discos.add(new Disco("ES017", "Los Planetas", "Una semana en el motor", "Indie", 50));
+
+    // Bloque 5: Electrónica & Otros (81-90)
+    discos.add(new Disco("EL001", "Daft Punk", "Discovery", "Electronic", 60));
+    discos.add(new Disco("EL002", "The Prodigy", "The Fat of the Land", "Electronic", 56));
+    discos.add(new Disco("EL003", "Kraftwerk", "The Man-Machine", "Electronic", 36));
+    discos.add(new Disco("EL004", "Chemical Brothers", "Dig Your Own Hole", "Electronic", 63));
+    discos.add(new Disco("EL005", "Massive Attack", "Mezzanine", "Trip-hop", 63));
+    discos.add(new Disco("EL006", "Aphex Twin", "Selected Ambient Works", "Ambient", 74));
+    discos.add(new Disco("EL007", "Fatboy Slim", "You've Come a Long Way, Baby", "Electronic", 62));
+    discos.add(new Disco("EL008", "Moby", "Play", "Electronic", 63));
+    discos.add(new Disco("EL009", "Justice", "Cross", "Electronic", 48));
+    discos.add(new Disco("EL010", "LCD Soundsystem", "Sound of Silver", "Electronic", 55));
+
+    System.out.println("Colección de prueba cargada con 90 discos únicos.");
+}
+
+}

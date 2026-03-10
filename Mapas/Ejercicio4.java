@@ -1,6 +1,5 @@
 package Mapas;
 
-import java.util.HashMap;
 import java.util.TreeMap;
 
 public class Ejercicio4 {
@@ -9,6 +8,7 @@ public class Ejercicio4 {
     public static void main(String[] args) {
                 
         // Creo mapa
+        @SuppressWarnings("Convert2Diamond")
         TreeMap<Integer, String> m = new TreeMap<Integer, String>();
 
         // Inserto valores

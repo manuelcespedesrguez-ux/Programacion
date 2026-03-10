@@ -55,6 +55,7 @@ public class EjemploColeccionesGatos {
     System.out.println("Abelardo está en la posición: "+pos);
 
     // UNMODIFIABLELIST 
+    @SuppressWarnings("unused")
     List<Gato> listaBlindada = Collections.unmodifiableList(gateria);
     // listaBlindada.add = (new Gato("Nuevo", "Blanco", "Común")); // Esto daría ERROR    
     }

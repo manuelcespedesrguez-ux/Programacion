@@ -50,10 +50,11 @@ public class Resuelto9SINREP {
                     numero[contador] = valor; // en contado el valor
                     contador++;
                     }
-                }; //Fin while
+                } //Fin while
                     return numero;
             }
 
+    @SuppressWarnings({ "resource", "unused" })
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);

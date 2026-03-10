@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Temperatura {
 
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -47,6 +48,7 @@ public class Temperatura {
 
         System.out.println("temp3");
         System.out.println(Arrays.toString(temperaturas3));
-        
+     
+        sc.close();
     }
 }

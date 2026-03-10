@@ -1,14 +1,15 @@
 package Mapas;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Ejercicio7 {
     
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
 
         // Creo mapa
+        @SuppressWarnings("Convert2Diamond")
         HashMap<Integer, String> mapa = new HashMap<Integer, String>();
         Scanner sc = new Scanner(System.in);
 

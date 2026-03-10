@@ -1,7 +1,5 @@
 package Ejercicios;
 
-import java.util.Scanner;
-
 public class Propuesto6 {
 
 	public static boolean esCapicua(int dato) {

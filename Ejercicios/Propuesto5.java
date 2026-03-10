@@ -18,6 +18,7 @@ public class Propuesto5 {
      * mayúsculas."
      */
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
 
         char[][] sopa = new char[15][15];

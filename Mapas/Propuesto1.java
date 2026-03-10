@@ -6,8 +6,10 @@ import java.util.Random;
 public class Propuesto1 {
 
     public static void ordena(int array[]) {
+        @SuppressWarnings("unused")
         int aux;
         for (int i=array.length; i>0; i--) {
+            @SuppressWarnings("unused")
             boolean intercambiado = false; // Reset de la bandera en cada pasada
             for(int j= 0; j < i - 1;j++) {
                 if (array[j] > array[j + 1]);

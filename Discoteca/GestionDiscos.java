@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class GestionDiscos {
@@ -111,6 +110,7 @@ public class GestionDiscos {
         System.out.print("Género: ");
         String generoIn = s.nextLine();
         System.out.print("Duración: ");
+        @SuppressWarnings("UnnecessaryTemporaryOnConversionFromString")
         Integer duracionIn = Integer.parseInt(s.nextLine());
 
         discos[posh] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
@@ -119,19 +119,19 @@ public class GestionDiscos {
 
     public static int buscarCodigo(){
 
-        int posh = -1;
-        boolean no_encontrado = true;
-        System.out.print("Introduzca codigo existente: ");
-        String code = s.nextLine();
-        for (int i = 0; i < discos.length; i++) {
-            // 1. Comparamos el código
-            if(discos[posh].getCodigo().equals(code))
-                return i;
+    System.out.print("Introduzca codigo existente: ");
+    String code = s.nextLine();
+
+    for (int i = 0; i < discos.length; i++) {
+        // 1. Verificamos que en esa posición haya un objeto Disco (que no sea null)
+        // 2. Comparamos el código usando 'i' como índice
+        if (discos[i] != null && discos[i].getCodigo().equalsIgnoreCase(code)) {
+            return i; // Si lo encuentra, devuelve el número de la posición
         }
-
-        return -1;
-
     }
+
+    return -1; // Si recorre todo el array y no lo encuentra, devuelve -1
+}
 
     private static void modificarDiscoExistente() {
        System.out.println("Hay que buscar por codigo el disco a modificar");
@@ -139,20 +139,91 @@ public class GestionDiscos {
        System.out.println("Y se piden de nuevo");
 
        int indice = buscarCodigo();
-       if (indice<discos.length) {
+
+       if (indice == -1) {
+            System.out.println("Código no encontrado");
+            
+       }else {
             System.out.println("Mostrar datos disco");
             System.out.println(discos[indice].toString());
             System.out.println("y ahora modificar...");
-       }else {
-            System.out.println("Código no encontrado");
-       }
+       
+            // Código para modificar un disco existente
+            // 1. Obtenemos el disco actual para mostrar sus valores
+            Disco d = discos[indice];
+
+            // --- Código ---
+            System.out.println("Código ("+ d.getCodigo() + ") ");
+            String codigoIn = s.nextLine();
+            if (!codigoIn.isBlank()) d.setCodigo(codigoIn);
+        
+            // --- Autor ---
+            System.out.println("Autor (" + d.getAutor() + "): ");
+            String autorIn = s.nextLine();
+            if (!autorIn.isBlank())d.setAutor(autorIn);
+
+            // --- Título ---
+            System.out.println("Título (" + d.getTitulo() + "): ");
+            String tituloIn = s.nextLine();
+            if (!tituloIn.isBlank()) d.setTitulo(tituloIn);
+            
+            // --- Género ---
+            System.out.println("Género (" + d.getGenero() + "): ");
+            String generoIn = s.nextLine();
+            if (!generoIn.isBlank()) d.setGenero(generoIn);
+
+            // --- Duración ---
+            System.out.println("Duración (" + d.getDuracion() + "): ");
+            String duracionIn = s.nextLine();
+            if (!generoIn.isBlank()) d.setDuracion(Integer.parseInt(duracionIn));
+            
+        }
+
+        System.out.println("\nDisco actualizado correctamente");
     }
+
+    private static void borrarDiscoExistente() {
+
+    int indice = buscarCodigo();
+
+    if (indice == -1) { 
+        System.out.println("Código no encontrado.");
+    } else {
+
+        // 1.Mostrar los datos del disco encontrado
+        System.out.println("\n--- Datos del disco a borrar ---");
+        System.out.println(discos[indice].toString());
+        
+        // 2. Primera pregunta de confirmación
+        System.out.print("\n¿Estás seguro de que quieres borrarlo? (S/N): ");
+        String respuesta1 = s.nextLine().toUpperCase();
+
+            if (respuesta1.equalsIgnoreCase("S")) {
+                
+                System.out.println("¿Está totalmente seguro de que desea eliminarlo? (S/N): ");
+                String respuesta2 = s.nextLine();
+                if (respuesta2.equalsIgnoreCase("S")) {
+
+                    // 4. Borrado lógico: ponemos la posición a null NOOOOOO
+                    // Estoy de acuerdo
+                    // discos[indice] = null
+                    discos[indice] = new Disco();
+                    System.out.println("\n ... Disco borrado de la colección con éxito ");
+
+                } else {
+                System.out.println("Operación cancelada correctamente.");
+            }
+        } else {
+            System.out.println("Operación cancelada correctamente, el disco no ha sido borrado.");
+        }
+    }
+}
 
 
     public static void main(String[] args) {
 
         s = new Scanner(System.in);
-        int opcion = 0;
+        int opcion;
         boolean seguir = true;
 
         // Empezar
@@ -212,7 +283,7 @@ public class GestionDiscos {
                     System.out.println("\nBORRAR");
                     System.out.println("======");
                     // Método para borrar un disco (que tenga código)
-                    
+                    borrarDiscoExistente();
                     break;
 
                 case 5:
@@ -241,6 +312,7 @@ public class GestionDiscos {
             } // switch
         } while (seguir == true);
 
+        s.close();
     }
 
 }

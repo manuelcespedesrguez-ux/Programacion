@@ -1,12 +1,12 @@
 package Ejercicios;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
 public class Propuesto9 {
 
+    @SuppressWarnings("ImplicitArrayToString")
     public static void main(String[] args) {
 
         Random random = new Random();
@@ -34,6 +34,7 @@ public class Propuesto9 {
         System.out.println("El mínimo es: " + min);
         System.out.println("la media es: " + (double) total / aleatorios.length);
 
+        @SuppressWarnings("Convert2Diamond")
         Map<Integer, Integer> cuenta = new HashMap<Integer, Integer>();
 
         for (int i = 10; i < 81; i++) {
@@ -62,7 +63,7 @@ public class Propuesto9 {
         for (Map.Entry<Integer, Integer> pareja : cuenta.entrySet()) {
             if (pareja.getValue() > repe) {
                 repe = pareja.getValue();
-                repe = pareja.getKey();
+                moda = pareja.getKey();
             }
         }
 

@@ -5,10 +5,12 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
 
         // Creo mapa
         Scanner sc = new Scanner(System.in);
+        @SuppressWarnings("Convert2Diamond")
         HashMap<Integer, String> m = new HashMap<Integer, String>();
 
         // Inserto valores

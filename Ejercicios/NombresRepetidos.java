@@ -1,6 +1,5 @@
 package Ejercicios;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -60,8 +59,5 @@ public class NombresRepetidos {
                 j++;
             }
         }
-
-        // Recortamos el array al tamaño real de coincidencia encontradas
-        temporal = Arrays.copyOf(temporal, k);
     }
 }
