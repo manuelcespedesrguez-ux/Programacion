@@ -1,10 +1,10 @@
 package Ordenamiento;
 import java.util.Arrays;
 import java.util.Random;
-import java.lang.String;
 
 public class Mergesort2 {
     
+    @SuppressWarnings("ManualArrayToCollectionCopy")
     public static String[] mergeSort(String array[]) {
 
         if(array.length > 1){
