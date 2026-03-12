@@ -1,6 +1,5 @@
 package ExamenRecProgramacion;
 
-import ExamenRecProgramacion.Ejercicio3;
 import ExamenRecProgramacion.Ejercicio3.tipoCuenta;
 
 public class TestEjercicio3 {

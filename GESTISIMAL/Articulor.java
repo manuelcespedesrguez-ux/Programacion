@@ -1,6 +1,6 @@
 package GESTISIMAL;
 
-public final class Articulor {
+public final class Articulor implements Comparable<Articulor> {
     //atributo de clase
     private static int contador=1;
     //atributos de objeto
@@ -111,4 +111,9 @@ public final class Articulor {
 	    setPrecioVenta(precioVenta);
         setStock(stock);
 	}
+
+    @Override
+    public int compareTo(Articulor o) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
