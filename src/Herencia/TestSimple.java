@@ -1,4 +1,4 @@
-package src.Herencia;
+package Herencia;
 
 public class TestSimple {
     

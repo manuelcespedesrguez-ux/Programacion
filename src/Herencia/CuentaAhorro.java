@@ -1,4 +1,4 @@
-package src.Herencia;
+package Herencia;
 
 public class CuentaAhorro extends Cuenta {
     
@@ -26,6 +26,32 @@ public class CuentaAhorro extends Cuenta {
         this.activa = activa;
     }
 
+    // Retirar
+    @Override
+    public void retirar(float cantidad) {
+        if (this.isActiva()) 
+            super.retirar(cantidad);
+         else 
+            System.out.println("La cuenta de ahorros no está activa. No se pueden realizar retiros.");
+    }
+
+    // Consignar
+    @Override
+    public void consignar(float cantidad) {
+        if (this.isActiva()) 
+            super.consignar(cantidad);
+        else
+            System.out.println("La cuenta de ahorro no está activa en este momento");
+    }
+
+    // Extracto mensual
+    @Override
+    public void extractoMensual() {
+        if (numeroRetiros > 4) 
+            this.comisionMensual =+ 1000f * (numeroRetiros - 4);
+            super.extractoMensual();
+    }
+    
     @Override
     public String toString() {
         return "CuentaAhorro [activa=" + activa + "]";

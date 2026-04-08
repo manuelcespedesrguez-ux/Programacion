@@ -44,6 +44,7 @@ public class TestGestisimal {
         "Modificación", "Entada de mercancía", "Salida de mercancía", "Cargar", "Guardar", "Salir"});
 
     // cargar coleccion
+    @SuppressWarnings("unchecked")
     public static void cargardessearchivo() {
 
         File fichero = new File("almacen.vitrasa");
