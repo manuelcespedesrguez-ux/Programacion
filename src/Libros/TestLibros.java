@@ -31,6 +31,7 @@ public class TestLibros {
     
         for (Libro libro : coleccion) {
             System.out.println(libro+"\n");
+            System.out.println("Prestado: " + libro.isPrestado());
         }
 
     }
