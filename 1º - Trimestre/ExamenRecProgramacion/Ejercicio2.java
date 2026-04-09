@@ -7,7 +7,8 @@ public class Ejercicio2 {
     
 
 
-    	public static void main(String[] args) {
+    	@SuppressWarnings("unused")
+		public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Dame tu salario anual bruto");
