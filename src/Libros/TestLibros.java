@@ -21,7 +21,7 @@ public class TestLibros {
         libro3.setPrecio(32000);
 
         // 4. Objeto de la clase Novela
-        Novela libro4 = new Novela("El nombre de la rosa", "Umberto Eco", Novela.genero.histórica);
+        Novela libro4 = new Novela("El nombre de la Rosa", "Umberto Eco", Novela.genero.histórica);
         libro4.setPrecio(52000);
     
         coleccion.add(libro1);
@@ -29,6 +29,10 @@ public class TestLibros {
         coleccion.add(libro3);  
         coleccion.add(libro4);
     
+        for (Libro libro : coleccion) {
+            System.out.println(libro+"\n");
+        }
+
     }
 
 }

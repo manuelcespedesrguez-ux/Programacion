@@ -40,7 +40,7 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "Libro [titulo=" + titulo + ", autor=" + autor + ", precio=" + precio + "]";
+        return "El libro " + titulo + " fue escrito por el autor " + autor + " y tiene un precio de $" + precio;
     }
 
     // Métodos propios 

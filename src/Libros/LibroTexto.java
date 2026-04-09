@@ -21,7 +21,7 @@ public class LibroTexto extends Libro{
     @Override
     public String toString() {
         String papa = super.toString();
-        return "Libro texto\n"+ papa + "\n Curso: " + curso;
+        return "El libro de texto " + papa + " y pertenece al curso: " + curso;
     }
 
 }

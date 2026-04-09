@@ -20,8 +20,8 @@ public class LibroTextoUNC extends LibroTexto {
 
     @Override
     public String toString() {
-        return "LibroTextoUNC [curso=" + curso + ", titulo=" + titulo + ", autor=" + autor + ", facultad=" + facultad
-                + ", precio=" + precio + "]";
+        String papito = super.toString();
+        return "El libro de texto de la UNC " + papito + " y pertenece a la facultad de: " + facultad;
     }
 
     

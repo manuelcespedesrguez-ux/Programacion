@@ -24,7 +24,7 @@ public class Novela extends Libro {
 
     @Override
     public String toString() {
-        return titulo + " de " + autor + " es una novela del género " + tipoNovela;
+        return titulo + ", fue escrita por el autor " + autor + " y es una novela del género " + tipoNovela;
     }   
 
 }
