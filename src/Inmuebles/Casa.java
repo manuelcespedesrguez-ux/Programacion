@@ -11,8 +11,7 @@ public class Casa extends Vivienda {
 
     @Override
     public String toString() {
-        return "Casa: id del inmueble: " + id + ", area del inmueble: " + area + ", direccion del inmueble: "
-                + direccion + ", precioVenta del inmueble: " + precioVenta + ", numero de habitaciones: " + numHab
-                + ", numero de baños: " + numBan + ", numero de pisos: " + numPisos;
+        return "La casa con id " + id + ", tiene un area de " + area + "m2, el inmueble se encuentra ubicado en "
+                + direccion + ", su precio de venta es de " + precioVenta + ", tiene " + numHab + " habitaciones , tiene " + numBan + " baños, y " + numPisos + " pisos";
     }
 }
