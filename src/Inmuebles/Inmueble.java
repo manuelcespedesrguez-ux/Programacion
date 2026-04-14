@@ -10,7 +10,7 @@ public class Inmueble {
     //Insertamos datos en el mapa
     public static void poblar() {
         VALOR_METRO_CUADRADO.put("Casa rural", 1500.0);
-        VALOR_METRO_CUADRADO.put("Casa en conjunto cerrado", 2500.0);
+        VALOR_METRO_CUADRADO.put("Casa urbanizacion", 2500.0);
         VALOR_METRO_CUADRADO.put("Casa independiente", 3000.0);
         VALOR_METRO_CUADRADO.put("Apartaestudio", 1500.0);
         VALOR_METRO_CUADRADO.put("Apartamento familiar", 2000.0);
