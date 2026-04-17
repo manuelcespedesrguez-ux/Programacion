@@ -23,7 +23,7 @@ public class Grande extends Perro {
 
     @Override
     public String toString() {
-        return "El perro grande que se llama " + nombre + ", tiene un peso de " + peso + " kg, tiene " + edad + " años, y es de color " + color + 
+        return "El perro grande " + nombre + ", tiene un peso de " + peso + " kg, tiene " + edad + " años, es de color " + color + 
         " y es de raza " + raza;
     }    
 

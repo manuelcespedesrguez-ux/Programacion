@@ -30,14 +30,13 @@ public class Perro extends Mascotas {
     @Override
     public void sonido(){
         super.sonido();
-        System.out.println("El perro ladra -> GUAU GUAU");
+        System.out.println("El perro " + nombre + " se acerca, te huele y te ladra GUAU GUAU");
     }
 
 
     @Override
     public String toString() {
-        return "Perro [nombre=" + nombre + ", peso=" + peso + ", edad=" + edad + ", muerde=" + muerde + ", color="
-                + color + "]";
+        return "El perro " + nombre + ", tiene un peso de " + peso + " kg, edad=" + edad + ", muerde=" + muerde + " y es de color " + color;
     }
 
 }

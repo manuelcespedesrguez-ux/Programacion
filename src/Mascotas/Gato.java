@@ -30,13 +30,12 @@ public class Gato extends Mascotas {
     @Override
     public void sonido(){
         super.sonido();
-        System.out.println("El gato maulla -> MIAU MIAU");
+        System.out.println("El gato " + nombre + " se acerca, te mira y te maulla MIAU MIAU");
     }
 
     @Override
     public String toString() {
-        return "Gato [nombre=" + nombre + ", altura=" + altura + ", edad=" + edad + ", longitud=" + longitud
-                + ", color=" + color + "]";
+        return "El gato " + nombre + " mide " + altura + " m, y tiene una longitud de " + longitud + " m, tiene " + edad + " años, y es de color " + color;
     }
 
 }
