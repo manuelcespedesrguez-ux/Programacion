@@ -2,6 +2,8 @@ package Mascotas;
 
 public class PeloLargo extends Gato {
     
+    protected double porcentaje_pelo_largo = 0.15;
+
     enum razaPL {
         persa, angora, himalayos, mainecoon, siberiano
     }
@@ -19,6 +21,12 @@ public class PeloLargo extends Gato {
 
     public void setRaza(razaPL raza) {
         this.raza = raza;
+    }
+
+    @Override
+    public double calcularPrecio() {
+        double precioActual = super.calcularPrecio();
+        return precioActual + (precioActual * porcentaje_pelo_largo);
     }
 
     @Override

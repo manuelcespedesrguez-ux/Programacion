@@ -5,11 +5,16 @@ public class Mascotas {
     protected String nombre;
     protected int edad;
     protected String color;
+    protected double precio_base_general = 1000.0;
 
     public Mascotas(String nombre, int edad, String color) {
         this.nombre = nombre;
         this.edad = edad;
         this.color = color;
+    }
+
+    public double calcularPrecio() {
+        return precio_base_general;
     }
 
     public String getNombre() {

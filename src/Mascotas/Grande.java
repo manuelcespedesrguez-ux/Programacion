@@ -2,6 +2,8 @@ package Mascotas;
 
 public class Grande extends Perro {
     
+    protected double porcentaje_grande = 0.20;
+
     enum razaG{
         gran_danes, san_bernardo, mastin, pastor_aleman, rottweiler
     }
@@ -20,6 +22,12 @@ public class Grande extends Perro {
     public void setRaza(razaG raza) {
         this.raza = raza;
     } 
+
+    @Override
+    public double calcularPrecio() {
+        double precioActual = super.calcularPrecio();
+        return precioActual + (precioActual * porcentaje_grande);
+    }
 
     @Override
     public String toString() {

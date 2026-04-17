@@ -21,9 +21,9 @@ public class Testeo1 {
 
         for (Perro perro : canes) {
             System.out.println(perro);
+            System.out.println("El perro tiene un precio de " + perro.calcularPrecio() + "$");
             perro.sonido();
             System.out.println();
         }
-
     }
 }

@@ -2,6 +2,8 @@ package Mascotas;
 
 public class Pequenho extends Perro {
     
+    protected double porcentaje_pequenho = 0.05;
+
     enum razaP {
         caniche, yorkshire, terrier, chihuahua, pomerania, maltese
     }
@@ -19,6 +21,11 @@ public class Pequenho extends Perro {
 
     public void setRaza(razaP raza) {
         this.raza = raza;
+    }
+
+    public double calcularPrecio() {
+        double precioActual = super.calcularPrecio();
+        return precioActual + (precioActual * porcentaje_pequenho);
     }
 
     @Override

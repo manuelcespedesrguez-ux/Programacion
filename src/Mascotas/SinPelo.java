@@ -2,6 +2,8 @@ package Mascotas;
 
 public class SinPelo extends Gato {
     
+    protected double porcentaje_sin_pelo = 0.40;
+
     enum razaSP {
         esfinge, elfo, donskoy
     }
@@ -19,6 +21,12 @@ public class SinPelo extends Gato {
 
     public void setRaza(razaSP raza) {
         this.raza = raza;
+    }
+
+    @Override
+    public double calcularPrecio() {
+        double precioActual = super.calcularPrecio();
+        return precioActual + (precioActual * porcentaje_sin_pelo);
     }
 
     @Override

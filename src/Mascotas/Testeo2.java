@@ -22,6 +22,7 @@ public class Testeo2 {
 
         for (Gato gato : gatos) {
             System.out.println(gato);
+            System.out.println("El gato tiene un precio de " + gato.calcularPrecio() + "$");
             gato.sonido();
             System.out.println();
         }

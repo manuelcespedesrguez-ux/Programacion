@@ -2,6 +2,8 @@ package Mascotas;
 
 public class Mediano extends Perro {
     
+    protected double porcentaje_mediano = 0.10;
+
     enum razaM {
         collie, dalmata, bulldog, galgo, boxer
     }
@@ -19,6 +21,11 @@ public class Mediano extends Perro {
 
     public void setRaza(razaM raza) {
         this.raza = raza;
+    }
+
+    public double calcularPrecio() {
+        double precioActual = super.calcularPrecio();
+        return precioActual + (precioActual * porcentaje_mediano);
     }
 
     @Override

@@ -3,7 +3,8 @@ package Mascotas;
 public class Gato extends Mascotas {
     
     protected double altura;
-    protected double longitud;  
+    protected double longitud; 
+    protected double plus_por_ser_gato = 50.0; 
 
     public Gato(String nombre, int edad, String color, double altura, double longitud) {
         super(nombre, edad, color);
@@ -25,6 +26,11 @@ public class Gato extends Mascotas {
 
     public void setLongitud(double longitud) {
         this.longitud = longitud;
+    }
+
+    @Override
+    public double calcularPrecio() {
+        return super.calcularPrecio() + plus_por_ser_gato;
     }
 
     @Override

@@ -4,6 +4,7 @@ public class Perro extends Mascotas {
     
     protected double peso;
     protected boolean muerde;
+    protected double plus_por_ser_perro = 500.0;
     
     public Perro(String nombre, int edad, String color, double peso, boolean muerde) {
         super(nombre, edad, color);
@@ -25,6 +26,11 @@ public class Perro extends Mascotas {
 
     public void setMuerde(boolean muerde) {
         this.muerde = muerde;
+    }
+
+    @Override
+    public double calcularPrecio() {
+        return super.calcularPrecio() + plus_por_ser_perro;
     }
 
     @Override
