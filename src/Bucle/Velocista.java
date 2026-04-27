@@ -1,5 +1,7 @@
 package Bucle;
 
+import java.util.Random;
+
 public class Velocista extends Ciclista {
     
     private double potenciaPromedio; /* Atributo que define la potencia promedio de un velocista */
@@ -39,8 +41,16 @@ public class Velocista extends Ciclista {
 	}
 	
 	/* PODRIAMOS CAMBIAR LA FORMA EN QUE CORRE LA ETAPA Y CALCULA LOS TIEMPOS?????*/
+    @Override
     public void correrEtapa(int tiempoMinino, int tiempoMaximo){
-        super.correrEtapa(tiempoMinino, tiempoMaximo);
+        Random rand = new Random();
+
+        int tiempoEtapa = rand.nextInt((tiempoMaximo - tiempoMinino) + 1) + tiempoMinino;
+
+        this.tiempo = tiempoEtapa;
+        this.tiempoAcumulado += tiempoEtapa;
+
+        System.out.println(nombre + " ha terminado la etapa en " + tiempoEtapa + " segundos");
     }	
 
 }
