@@ -38,6 +38,9 @@ public class Velocista extends Ciclista {
 		return "Es un velocista";
 	}
 	
-	/* PODRIAMOS CAMBIAR LA FORMA EN QUE CORRE LA ETAPA Y CALCULA LOS TIEMPOS?????*/	
+	/* PODRIAMOS CAMBIAR LA FORMA EN QUE CORRE LA ETAPA Y CALCULA LOS TIEMPOS?????*/
+    public void correrEtapa(int tiempoMinino, int tiempoMaximo){
+        super.correrEtapa(tiempoMinino, tiempoMaximo);
+    }	
 
 }
