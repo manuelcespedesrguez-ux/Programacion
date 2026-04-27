@@ -58,7 +58,7 @@ public class Ciclista {
 		}
 		
 		protected void imprimir() {
-            System.out.println("Posición General = " + posicionGen); // <--- Añade esta línea
+            System.out.println("Posición General = " + posicionGen + "º"); 
             System.out.println("Identificador = " + dorsal);
             System.out.println("Nombre = " + nombre);
             System.out.println("Tiempo Parcial = " + tiempo);
