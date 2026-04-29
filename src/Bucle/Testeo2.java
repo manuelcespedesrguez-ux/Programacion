@@ -38,27 +38,30 @@ public class Testeo2 {
         }
 
         // Etapa nueva
-        System.out.println("\n--- Resultados etapa 2 ---\n");
-        for (Ciclista c : ciclista) {
-            int acumuladoPrevio = c.getTiempoAcumulado();
-            c.correrEtapa(3000, 5000);
-            c.setTiempoAcumulado(acumuladoPrevio + c.getTiempo());
-        }
+       System.out.println("\n--- Resultados etapa 2 ---\n");
+            for (Ciclista c : ciclista) {
+                // Solo llamamos al método, él ya se encarga de actualizar tiempo y acumulado
+                c.correrEtapa(3000, 5000); 
+            }
 
-        logi.ordenarPorTiempo(ciclista);
+        // Ahora ordenamos por el tiempo de ESTA etapa (tiempo parcial)
+        logi.ordenarPorTiempo(ciclista); 
         System.out.println("\n--- Clasificación etapa 2 ---\n");
-        for (Ciclista c : ciclista) { 
-            c.imprimir(); 
-            System.out.println("-----------------------");
-        }
+            for (Ciclista c : ciclista) { 
+                c.imprimir(); 
+                System.out.println("-----------------------");
+            }
 
-        // Clasificación General Etapa 2
-        logi.actualizarClasificacionGeneral(ciclista);
-        System.out.println("\n--- Clasificación general después de la 2º etapa ---\n");
-        for (Ciclista c : ciclista) { 
-            c.imprimir(); 
-            System.out.println("-----------------------");
-        }
+        logi.actualizarClasificacionGeneral(ciclista); // Este método debe ordenar por tiempoAcumulado y asignar posición
+        System.out.println("\n--- CLASIFICACIÓN GENERAL FINAL ---\n");
+
+            int puesto = 1;
+            for (Ciclista c : ciclista) { 
+                System.out.println(puesto + "º");
+                c.imprimir(); // El método imprimir de Ciclista ya muestra los datos del corredor
+                System.out.println("-----------------------");
+                puesto++;
+            }
 
     }
 }

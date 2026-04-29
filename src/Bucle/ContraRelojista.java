@@ -32,20 +32,16 @@ public class ContraRelojista extends Ciclista {
 	/* PODRIAMOS CAMBIAR LA FORMA EN QUE CORRE LA ETAPA Y CALCULA LOS TIEMPOS????? */
 	@Override
 	public void correrEtapa(int tiempoMinimo, int tiempoMaximo) {
-        Random random = new Random();
-		    
-		// Generamos un número aleatorio entre el mínimo y el máximo inclusive
-        // La fórmula es: random.nextInt((max - min) + 1) + min
-        int tiempoDeEstaEtapa = random.nextInt((tiempoMaximo - tiempoMinimo) + 1) + tiempoMinimo;
-        
-        // 1. Seteamos el tiempo parcial de la etapa actual
-        this.tiempo = tiempoDeEstaEtapa;
-        
-        // 2. Acumulamos el tiempo en el total del ciclista
-        this.tiempoAcumulado += tiempoDeEstaEtapa;
-        
-        System.out.println(nombre + " ha terminado la etapa en: " + tiempoDeEstaEtapa + " segundos.");
-			
+		Random random = new Random();
+		int tiempoBase = random.nextInt((tiempoMaximo - tiempoMinimo) + 1) + tiempoMinimo;
+		
+		// Restamos 10 * velocidadMaxima
+		int tiempoDeEstaEtapa = tiempoBase - (int)(10 * velocidadMaxima);
+		
+		this.tiempo = tiempoDeEstaEtapa;
+		this.tiempoAcumulado += tiempoDeEstaEtapa;
+		
+		System.out.println(nombre + " ha terminado la etapa en: " + tiempoDeEstaEtapa + " segundos (Base: " + tiempoBase + ")");
 	}
 	
 
