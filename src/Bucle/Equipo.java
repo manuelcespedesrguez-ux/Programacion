@@ -16,6 +16,14 @@ public class Equipo {
         tiempo = 0;
         listaCiclistas = new ArrayList<Ciclista>();
     }
+    
+    public ArrayList<Ciclista> getListaCiclistas() {
+        return listaCiclistas;
+    }
+
+    public void setListaCiclistas(ArrayList<Ciclista> listaCiclistas) {
+        this.listaCiclistas = listaCiclistas;
+    }
 
     public String getNombre() {
         return nombre;
@@ -32,6 +40,5 @@ public class Equipo {
     public void setPais(String pais) {
         this.pais = pais;
     }
-
 
 }
