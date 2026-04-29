@@ -21,8 +21,13 @@ public class ContraRelojista extends Ciclista {
 	}
 	
 	protected void imprimir() {
-		super.imprimir(); // Invoca el método imprimir de la clase padre
-		System.out.println("Velocidad MAXIMA = " + 	velocidadMaxima);
+    // ... (código existente de super.imprimir())
+    System.out.println("Tiempo Acumulado = " + tiempoAcumulado + " segundos");
+    // Añadimos el formato hh:mm:ss
+    	int h = tiempoAcumulado / 3600;
+    	int m = (tiempoAcumulado % 3600) / 60;
+    	int s = tiempoAcumulado % 60;
+    	System.out.printf("Tiempo total = %02d:%02d:%02d%n", h, m, s);
 	}
 	
 	protected String imprimirTipo() {

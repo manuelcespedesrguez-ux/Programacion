@@ -56,6 +56,13 @@ public class Ciclista {
 		protected void setTiempoAcumulado(int tiempoAcumulado) {
 			this.tiempoAcumulado = tiempoAcumulado;
 		}
+
+		public String formatearTiempo(int segundosTotales) {
+    		int horas = segundosTotales / 3600;
+    		int minutos = (segundosTotales % 3600) / 60;
+    		int segundos = segundosTotales % 60;
+    		return String.format("Tiempo total = ", horas, minutos, segundos);
+		}
 		
 		protected void imprimir() {
             System.out.println("Posición General = " + posicionGen + "º"); 
