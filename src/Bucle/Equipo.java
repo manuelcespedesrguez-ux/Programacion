@@ -41,6 +41,14 @@ public class Equipo {
     public void setPais(String pais) {
         this.pais = pais;
     }
+    
+    public int getTiempo() {
+        return tiempo;
+    }
+
+    public int getTiempoAcumulado() {
+        return tiempoAcumulado;
+    }
 
     void añadirCiclista(Ciclista c){
         listaCiclistas.add(c);

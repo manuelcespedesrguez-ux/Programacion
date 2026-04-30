@@ -55,7 +55,7 @@ public class Velocista extends Ciclista {
 		this.tiempo = tiempoEtapa;
 		this.tiempoAcumulado += tiempoEtapa;
 
-		System.out.println(nombre + " ha terminado la etapa en " + tiempoEtapa + " segundos (Base: " + tiempoBase + ")");
+		System.out.println(nombre + " ha terminado la etapa en: " + tiempoEtapa + " segundos (Base: " + tiempoBase + ")");
 	}
 
 }
