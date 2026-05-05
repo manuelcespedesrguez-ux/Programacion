@@ -3,7 +3,7 @@ package Medicina;
 public class Pediatra extends Medico{
     
     enum tipologia {
-        NEUROLOGO, PSICOLOGO
+        neurologo, psicologo
     };
     protected tipologia tipo;
 
