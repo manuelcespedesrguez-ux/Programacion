@@ -17,6 +17,21 @@ public class Prueba {
         Pediatra pedi1 = new Pediatra("Dra. Ana Moreno", Pediatra.tipologia.neurologo);
         listaMedicos.add(pedi1);
 
+        for (int i = 0; i < listaMedicos.size(); i++) {
+            Medico a = (Medico) listaMedicos.get(i);
+            if (a instanceof Ortopedista) {
+                System.out.println("El objeto en el índice " + i + " es un Ortopedista");
+                continue;
+            }
+            if (a instanceof Pediatra) {
+                System.out.println("El objeto en el índice " + i + " es un Pediatra");
+                continue;
+            }
+            if (a instanceof Medico) {
+                System.out.println("El objeto en el índice " + i + " es un Médico");
+                continue;
+            }
+        }
     }
 
 }
