@@ -17,6 +17,9 @@ public class testMamifero {
         for(Mamifero m : listaMamiferos) {
             m.comer();
             m.amamantarCrias();
+            if (m instanceof Ormitorrinco) {
+            ((Ormitorrinco) m).ponerHuevos();
+            }
             System.out.println("-----------------------------");
         }
     }
