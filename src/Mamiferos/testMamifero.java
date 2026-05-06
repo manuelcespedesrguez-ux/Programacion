@@ -20,6 +20,9 @@ public class testMamifero {
             if (m instanceof Ormitorrinco) {
             ((Ormitorrinco) m).ponerHuevos();
             }
+            if (m instanceof Murcielago) {
+                ((Murcielago)m).volar();
+            }
             System.out.println("-----------------------------");
         }
     }
