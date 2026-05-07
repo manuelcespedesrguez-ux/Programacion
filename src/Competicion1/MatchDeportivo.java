@@ -1,6 +1,6 @@
-package Competicion;
+package Competicion1;
 
-public class MatchDeportivo {
+public interface MatchDeportivo {
     
     public void setEquipoLocal(String nombre);
 

@@ -2,6 +2,7 @@ package Bio;
 
 public class Testeo1 {
     
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         
         /*Animal sobera = new Animal("ewrg!", "kiwis", "navideño", "Cejus hispanicus");

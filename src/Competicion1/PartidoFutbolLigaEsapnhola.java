@@ -1,4 +1,4 @@
-package Competicion;
+package Competicion1;
 
 public class PartidoFutbolLigaEsapnhola implements PartidoFutbol {
     
@@ -8,7 +8,7 @@ public class PartidoFutbolLigaEsapnhola implements PartidoFutbol {
     private int golesEquipoVisitante;
 
     public PartidoFutbolLigaEsapnhola(String equipoLocal, String equipoVisitante, int golesEquipoLocal,
-            int golesEquipoVisitante) {
+        int golesEquipoVisitante) {
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
         this.golesEquipoLocal = golesEquipoLocal;
