@@ -1,11 +1,12 @@
 package Compo;
 
-public class TestCirculo {
+public class TestCirculoTrian {
     
     public static void main(String[] args) {
         
         Circulo circ = new Circulo(4, 5, 3);
         Triangulo triangulo = new Triangulo(new Punto(6, 9), new Punto(15, 18), new Punto(24, 27));
+        Recta recta = new Recta(new Punto(5, 6), new Punto(7, 9));
 
         Punto punt = circ.getCentro();
         System.out.println("El centro del círculo está en la coordenada (" + punt.toString() + ")");
@@ -15,6 +16,11 @@ public class TestCirculo {
 
         System.out.println("\nInformación del triángulo: ");
         triangulo.imprimir();
+
+        System.out.println("\nInformación de la recta: ");
+        recta.imprimir();
+        recta.calcularPendiente();
+        recta.calcularLongitud();
 
     }
 
