@@ -61,13 +61,13 @@ public class Peaje {
 
 			totalCamiones++; 
 			Camion camion = (Camion) vehiculo;
-			totalPagar = camion.getNumeroEjes() * camion.getValorPeajeEje();
+			totalPagar = camion.getNumeroEjes() * Camion.getValorPeajeEje();
 			
 		} if (totalPagar > 0 ) {
 			vehiculo.peajeAcumulado += totalPagar;
 			totalPeaje += totalPagar;
 			return totalPagar;
-			
+
 		}else
 			return -1; 
 	}
