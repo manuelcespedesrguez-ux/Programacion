@@ -1,6 +1,7 @@
 package Peaje;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Peaje {
 
@@ -8,7 +9,8 @@ public class Peaje {
 	String nombre;
 	String departamento;
 
-	Vector<Vehiculo> vehiculos;
+	List<Vehiculo> veoculos = new ArrayList<>();
+
 	int totalPeaje = 0;
 	static int totalCamiones = 0;
 	static int totalMotos = 0;
@@ -17,7 +19,8 @@ public class Peaje {
 	Peaje(String nombre, String departamento) {
 		this.nombre = nombre;
 		this.departamento = departamento;
-		vehiculos = new Vector<Vehiculo>(); // Crea el vector de vehículos
+		// Cambio el vector por un ArrayList
+		veoculos = new ArrayList<Vehiculo>(); 
 	}
 
 	public String getNombre() {
@@ -37,31 +40,35 @@ public class Peaje {
 	}
 
 	public void anadirVehiculo(Vehiculo vehiculo) {
-		vehiculos.add(vehiculo);
+		veoculos.add(vehiculo);
 	}
 
 	public int calcularPeaje(Vehiculo vehiculo) {
+		int totalPagar = 0;
+
 		if (vehiculo instanceof Carro) { 
 
 			totalCarros++;
-			totalPeaje += Carro.valorPeaje; 
-			return Carro.valorPeaje; 
+			totalPagar += Carro.valorPeaje; 
 
 		} else if (vehiculo instanceof Moto) { 
             
 			totalMotos++;
-			totalPeaje += Moto.valorPeaje;
+			totalPagar += Moto.valorPeaje;
 											 
 			return Moto.valorPeaje;
 		} else if (vehiculo instanceof Camion) { 
 
 			totalCamiones++; 
-
 			Camion camion = (Camion) vehiculo;
-
-			totalPeaje += camion.numeroEjes * Camion.valorPeajeEje;
-			return camion.numeroEjes * Camion.valorPeajeEje;
-		} else
+			totalPagar = camion.getNumeroEjes() * camion.getValorPeajeEje();
+			
+		} if (totalPagar > 0 ) {
+			vehiculo.peajeAcumulado += totalPagar;
+			totalPeaje += totalPagar;
+			return totalPagar;
+			
+		}else
 			return -1; 
 	}
 
@@ -72,5 +79,17 @@ public class Peaje {
         System.out.println("Por ese mismo peaje han pasado un total de " + totalVehiculos 
         + " vehículos, de los cuales " + totalCarros + " son coches, " + totalMotos + " son motos y " + totalCamiones + " son camiones.\n");
 		
+	}
+
+	public void imprimirMTotal(Persona pepe) {
+		System.out.println("\nInforme sobre lo pagado en el peaje de " + nombre + " por la persona " + pepe.getNombre() + " " + pepe.getApellido());
+		int totalPagado = 0;
+
+		for ( Vehiculo veoculito : pepe.getvehiculosEnPropiedad()) {
+			totalPagado += veoculito.peajeAcumulado;
+			System.out.println("Vehiculo con placa " + veoculito.placa + " ha pagado un total de " + veoculito.peajeAcumulado);
+		}
+
+		System.out.println("En total, " + pepe.getNombre() + " " + pepe.getApellido() + " ha pagado un total de " + totalPagado + " euros en el peaje de " + nombre + ".\n");
 	}
 }
