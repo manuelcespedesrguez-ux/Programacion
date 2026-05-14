@@ -1,15 +1,16 @@
 package Charlin;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class OrdenCompra {
     
-    int id;
-    String[] lineapedido;
+   private int id=0;
+    private ArrayList<LineaPedido> orden;
+    private double totalOrden;
 
-    public OrdenCompra(int id, String[] lineapedido) {
+    public OrdenCompra(int id) {
         this.id = id;
-        this.lineapedido = lineapedido;
+        orden=new ArrayList<>();
     }
 
     public int getId() {
@@ -20,15 +21,32 @@ public class OrdenCompra {
         this.id = id;
     }
 
-    public void calcularTotal(){
+    public ArrayList<LineaPedido> getOrdenes() {
+        return orden;
+    }
 
+    public void setOrdenes(ArrayList<LineaPedido> ordenes) {
+        this.orden = ordenes;
+    }
+
+    //Calcular el TotalDeOrden
+    public void calcularTotalOrden(){
+        for (LineaPedido pedidos: orden){
+            this.totalOrden+= pedidos.getSubTotal();
+        }
+    }
+
+    //Añadir Item a coleccion
+    public void añadirItem(int id, int cantidad, Productos productos){
+        orden.add(new LineaPedido(id, cantidad,  productos));
     }
 
     @Override
     public String toString() {
-        return "El orden de compra con id " + id + " y linea de pedido " + Arrays.toString(lineapedido);
+        return "OrdenCompra{" +
+                "id=" + id +
+                ", totalOrden=" + totalOrden +
+                '}';
     }
-
-    
 
 }
